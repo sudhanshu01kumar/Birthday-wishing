@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Happy Birthday ❤️</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- Animated Background -->
+
+    <div id="stars"></div>
+
+    <div id="hearts"></div>
+
+    <div id="balloons"></div>
+
+    <!-- Welcome Screen -->
+
+    <section id="welcome" class="screen">
+
+        <h2>🎉 Happy Birthday 🎉</h2>
+
+        <h1 id="personName">name ❤️</h1>
+
+        <p>Today is your special day!</p>
+
+        <button id="startBtn">
+            Start Celebration 🎂
+        </button>
+
+    </section>
+
+    <!-- Celebration Screen -->
+
+    <section id="celebration" class="screen hidden">
+
+        <div class="glass">
+
+            <h2>💌 Birthday Wishes</h2>
+
+            <p id="typing"></p>
+
+        </div>
+
+        <!-- Cake -->
+
+        <div id="cakeArea">
+
+            <div id="candle">
+
+                <div id="flame"></div>
+
+            </div>
+
+            <div id="cake">
+
+                <div class="icing"></div>
+
+                <div class="layer top"></div>
+
+                <div class="layer middle"></div>
+
+                <div class="layer bottom"></div>
+
+            </div>
+
+            <p class="hint">
+                👆 Click the candle and make a wish
+            </p>
+
+        </div>
+
+        <div id="wishMessage" class="hidden">
+
+            🎉 Your wish has been sent! ❤️
+
+        </div>
+
+        <!-- Gift -->
+
+        <div id="gift">
+
+            🎁
+
+        </div>
+
+        <div id="giftMessage" class="hidden">
+
+            <h2>Happy Birthday ❤️</h2>
+
+            <p>
+
+                May your life always be filled with
+
+                happiness,
+
+                love,
+
+                success,
+
+                laughter,
+
+                and unforgettable memories.
+
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- Music -->
+
+    <audio id="music" loop>
+
+        <source src="assets/music.mp3" type="audio/mpeg">
+
+    </audio>
+
+    <!-- Confetti Library -->
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

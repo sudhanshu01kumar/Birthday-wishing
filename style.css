@@ -1,0 +1,773 @@
+/* ==========================================
+   RESET
+========================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    min-height:100vh;
+
+    overflow:hidden;
+
+    color:white;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:linear-gradient(
+        -45deg,
+        #ff4e50,
+        #fc913a,
+        #f9d423,
+        #ff4e50
+    );
+
+    background-size:400% 400%;
+
+    animation:bgMove 12s ease infinite;
+
+    position:relative;
+
+}
+
+/* ==========================================
+   BACKGROUND
+========================================== */
+
+#stars,
+#hearts,
+#balloons{
+
+    position:absolute;
+
+    inset:0;
+
+    pointer-events:none;
+
+}
+
+#stars{
+
+    background-image:
+        radial-gradient(white 1px, transparent 1px);
+
+    background-size:40px 40px;
+
+    opacity:.35;
+
+    animation:starsMove 70s linear infinite;
+
+}
+
+/* ==========================================
+   SCREEN
+========================================== */
+
+.screen{
+
+    position:absolute;
+
+    width:100%;
+    height:100vh;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    z-index:10;
+
+    padding:20px;
+
+}
+
+.hidden{
+
+    display:none;
+
+}
+
+/* ==========================================
+   WELCOME
+========================================== */
+
+#welcome h2{
+
+    font-size:32px;
+
+    letter-spacing:2px;
+
+    animation:fadeUp 1s;
+
+}
+
+#personName{
+
+    font-size:90px;
+
+    margin:20px 0;
+
+    text-shadow:
+    0 0 15px white,
+    0 0 30px pink;
+
+    animation:glow 2s infinite alternate;
+
+}
+
+#welcome p{
+
+    font-size:24px;
+
+    opacity:.9;
+
+}
+
+#startBtn{
+
+    margin-top:45px;
+
+    padding:18px 45px;
+
+    border:none;
+
+    border-radius:50px;
+
+    cursor:pointer;
+
+    font-size:22px;
+
+    font-weight:bold;
+
+    background:white;
+
+    color:#ff4e50;
+
+    transition:.4s;
+
+}
+
+#startBtn:hover{
+
+    transform:scale(1.1);
+
+    box-shadow:0 0 35px white;
+
+}
+
+/* ==========================================
+   GLASS CARD
+========================================== */
+
+.glass{
+
+    width:90%;
+
+    max-width:800px;
+
+    padding:40px;
+
+    border-radius:25px;
+
+    background:rgba(255,255,255,.12);
+
+    backdrop-filter:blur(12px);
+
+    border:1px solid rgba(255,255,255,.25);
+
+    box-shadow:0 15px 50px rgba(0,0,0,.2);
+
+}
+
+.glass h2{
+
+    margin-bottom:25px;
+
+    font-size:38px;
+
+}
+
+#typing{
+
+    min-height:160px;
+
+    line-height:1.8;
+
+    font-size:24px;
+
+}
+
+/* ==========================================
+   CAKE
+========================================== */
+
+#cakeArea{
+
+    margin-top:50px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+}
+
+#cake{
+
+    position:relative;
+
+    margin-top:15px;
+
+}
+
+.layer{
+
+    height:60px;
+
+    border-radius:15px;
+
+    margin:8px auto;
+
+}
+
+.top{
+
+    width:170px;
+
+    background:#ffbfd2;
+
+}
+
+.middle{
+
+    width:210px;
+
+    background:#ff8fb0;
+
+}
+
+.bottom{
+
+    width:250px;
+
+    background:#ff5f91;
+
+}
+
+.icing{
+
+    width:180px;
+
+    height:20px;
+
+    margin:auto;
+
+    background:white;
+
+    border-radius:20px;
+
+}
+
+/* ==========================================
+   CANDLE
+========================================== */
+
+#candle{
+
+    width:14px;
+
+    height:75px;
+
+    background:white;
+
+    border-radius:10px;
+
+    position:relative;
+
+}
+
+#flame{
+
+    width:24px;
+
+    height:34px;
+
+    position:absolute;
+
+    top:-32px;
+
+    left:-5px;
+
+    background:gold;
+
+    border-radius:50% 50% 45% 45%;
+
+    cursor:pointer;
+
+    animation:flicker .18s infinite alternate;
+
+    box-shadow:
+        0 0 15px orange,
+        0 0 35px yellow,
+        0 0 55px gold;
+
+}
+
+.hint{
+
+    margin-top:20px;
+
+    animation:pulse 2s infinite;
+
+}
+
+.smoke{
+
+    position:absolute;
+
+    top:-30px;
+
+    left:-10px;
+
+    font-size:28px;
+
+    animation:smokeRise 2s forwards;
+
+}
+/* ==========================================
+   BALLOONS
+========================================== */
+
+.balloon{
+
+    position:absolute;
+
+    bottom:-120px;
+
+    font-size:60px;
+
+    cursor:pointer;
+
+    pointer-events:auto;
+
+    animation:floatBalloon linear forwards;
+
+}
+
+/* ==========================================
+   HEARTS
+========================================== */
+
+.heart{
+
+    position:absolute;
+
+    bottom:-50px;
+
+    font-size:24px;
+
+    opacity:.8;
+
+    animation:floatHeart linear forwards;
+
+}
+
+/* ==========================================
+   GIFT
+========================================== */
+
+#gift{
+
+    margin-top:40px;
+
+    font-size:90px;
+
+    cursor:pointer;
+
+    transition:.4s;
+
+}
+
+#gift:hover{
+
+    transform:scale(1.15) rotate(10deg);
+
+}
+
+#giftMessage{
+
+    margin-top:30px;
+
+    width:90%;
+
+    max-width:700px;
+
+    padding:25px;
+
+    border-radius:20px;
+
+    background:rgba(255,255,255,.15);
+
+    backdrop-filter:blur(10px);
+
+    animation:fadeUp 1s;
+
+}
+
+#giftMessage h2{
+
+    margin-bottom:15px;
+
+    font-size:36px;
+
+}
+
+#giftMessage p{
+
+    font-size:22px;
+
+    line-height:1.8;
+
+}
+
+/* ==========================================
+   WISH MESSAGE
+========================================== */
+
+#wishMessage{
+
+    margin-top:35px;
+
+    font-size:34px;
+
+    font-weight:bold;
+
+    animation:fadeUp 1s;
+
+}
+
+/* ==========================================
+   FINAL SCREEN
+========================================== */
+
+.final{
+
+    position:fixed;
+
+    inset:0;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    flex-direction:column;
+
+    text-align:center;
+
+    padding:20px;
+
+    background:linear-gradient(135deg,#ff4e50,#ff7eb3);
+
+    animation:fadeUp 1s;
+
+    z-index:999;
+
+}
+
+.final h1{
+
+    font-size:70px;
+
+    margin-bottom:20px;
+
+}
+
+.final h2{
+
+    font-size:45px;
+
+    margin-bottom:20px;
+
+}
+
+.final p{
+
+    font-size:26px;
+
+    line-height:1.8;
+
+    max-width:800px;
+
+}
+
+/* ==========================================
+   ANIMATIONS
+========================================== */
+
+@keyframes bgMove{
+
+    0%{
+
+        background-position:0% 50%;
+
+    }
+
+    50%{
+
+        background-position:100% 50%;
+
+    }
+
+    100%{
+
+        background-position:0% 50%;
+
+    }
+
+}
+
+@keyframes starsMove{
+
+    from{
+
+        transform:translateY(0);
+
+    }
+
+    to{
+
+        transform:translateY(-1200px);
+
+    }
+
+}
+
+@keyframes glow{
+
+    from{
+
+        text-shadow:
+            0 0 15px white,
+            0 0 30px pink;
+
+    }
+
+    to{
+
+        text-shadow:
+            0 0 30px white,
+            0 0 60px hotpink,
+            0 0 90px deeppink;
+
+    }
+
+}
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+@keyframes pulse{
+
+    0%{
+
+        transform:scale(1);
+
+        opacity:1;
+
+    }
+
+    50%{
+
+        transform:scale(1.05);
+
+        opacity:.5;
+
+    }
+
+    100%{
+
+        transform:scale(1);
+
+        opacity:1;
+
+    }
+
+}
+
+@keyframes flicker{
+
+    from{
+
+        transform:scale(.95) rotate(-2deg);
+
+    }
+
+    to{
+
+        transform:scale(1.05) rotate(2deg);
+
+    }
+
+}
+
+@keyframes smokeRise{
+
+    0%{
+
+        opacity:1;
+
+        transform:translateY(0) scale(1);
+
+    }
+
+    100%{
+
+        opacity:0;
+
+        transform:translateY(-100px) scale(2);
+
+    }
+
+}
+
+@keyframes floatBalloon{
+
+    from{
+
+        transform:translateY(0);
+
+    }
+
+    to{
+
+        transform:translateY(-130vh);
+
+    }
+
+}
+
+@keyframes floatHeart{
+
+    from{
+
+        transform:translateY(0) rotate(0deg);
+
+    }
+
+    to{
+
+        transform:translateY(-130vh) rotate(360deg);
+
+    }
+
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media (max-width:768px){
+
+    #personName{
+
+        font-size:54px;
+
+    }
+
+    .glass{
+
+        padding:25px;
+
+    }
+
+    #typing{
+
+        font-size:18px;
+
+    }
+
+    .top{
+
+        width:120px;
+
+    }
+
+    .middle{
+
+        width:150px;
+
+    }
+
+    .bottom{
+
+        width:180px;
+
+    }
+
+    .layer{
+
+        height:45px;
+
+    }
+
+    #gift{
+
+        font-size:70px;
+
+    }
+
+    .final h1{
+
+        font-size:42px;
+
+    }
+
+    .final h2{
+
+        font-size:30px;
+
+    }
+
+    .final p{
+
+        font-size:18px;
+
+    }
+
+}
